@@ -1,4 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>qa.portfolio</groupId>
@@ -11,7 +15,7 @@
   </properties>
 
   <dependencies>
-    <!-- RestAssured -->
+
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
@@ -19,7 +23,6 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- JUnit 5 API -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
@@ -27,7 +30,6 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- JUnit 5 Engine (CRITICAL FIX) -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
@@ -36,23 +38,23 @@
     </dependency>
 
     <dependency>
-  <groupId>org.hamcrest</groupId>
-  <artifactId>hamcrest</artifactId>
-  <version>2.2</version>
-  <scope>test</scope>
-</dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest</artifactId>
+      <version>2.2</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
 
   <build>
     <plugins>
-      <!-- Compiler plugin -->
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.11.0</version>
       </plugin>
 
-      <!-- Surefire plugin (runs tests) -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -61,6 +63,8 @@
           <useModulePath>false</useModulePath>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
+
 </project>
