@@ -1,4 +1,5 @@
 name: Run Java API Tests
+
 on: [push]
 
 jobs:
@@ -14,5 +15,5 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Run Tests
-        run: mvn clean test
+      - name: Build and Test
+        run: mvn -B clean test
